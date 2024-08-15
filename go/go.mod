@@ -1,6 +1,8 @@
 module github.com/bnb-chain/greenfield-common/go
 
-go 1.20
+go 1.21
+
+toolchain go1.22.4
 
 require (
 	github.com/cosmos/cosmos-sdk v0.47.10
@@ -142,12 +144,13 @@ require (
 	github.com/zondax/hid v0.9.1 // indirect
 	github.com/zondax/ledger-go v0.14.1 // indirect
 	go.etcd.io/bbolt v1.3.9 // indirect
-	golang.org/x/crypto v0.21.0 // indirect
+	go.uber.org/mock v0.4.0 // indirect
+	golang.org/x/crypto v0.25.0 // indirect
 	golang.org/x/exp v0.0.0-20230711153332-06a737ee72cb // indirect
-	golang.org/x/net v0.23.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
-	golang.org/x/term v0.18.0 // indirect
-	golang.org/x/text v0.14.0 // indirect
+	golang.org/x/net v0.27.0 // indirect
+	golang.org/x/sys v0.22.0 // indirect
+	golang.org/x/term v0.22.0 // indirect
+	golang.org/x/text v0.16.0 // indirect
 	google.golang.org/genproto v0.0.0-20231016165738-49dd2c1f3d0b // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20231012201019-e917dd12ba7a // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20231016165738-49dd2c1f3d0b // indirect
@@ -162,18 +165,18 @@ require (
 )
 
 replace (
-	cosmossdk.io/api => github.com/zkMeLabs/mechain-cosmos-sdk/api v0.0.0-20240722072054-a692e90dceb7
-	cosmossdk.io/math => github.com/zkMeLabs/mechain-cosmos-sdk/math v0.0.0-20240722072054-a692e90dceb7
-	cosmossdk.io/simapp => github.com/zkMeLabs/mechain-cosmos-sdk/simapp v0.0.0-20240722072054-a692e90dceb7
+	cosmossdk.io/api => github.com/zkMeLabs/mechain-cosmos-sdk/api v0.0.0-20240821015333-b9a61ee4d0d5
+	cosmossdk.io/math => github.com/zkMeLabs/mechain-cosmos-sdk/math v0.0.0-20240821015333-b9a61ee4d0d5
+	cosmossdk.io/simapp => github.com/zkMeLabs/mechain-cosmos-sdk/simapp v0.0.0-20240821015333-b9a61ee4d0d5
 	github.com/btcsuite/btcd => github.com/btcsuite/btcd v0.23.0
 	github.com/cometbft/cometbft => github.com/bnb-chain/greenfield-cometbft v1.3.0
 	github.com/cometbft/cometbft-db => github.com/bnb-chain/greenfield-cometbft-db v0.8.1-alpha.1
 	github.com/confio/ics23/go => github.com/cosmos/cosmos-sdk/ics23/go v0.8.0
-	github.com/cosmos/cosmos-sdk => github.com/zkMeLabs/mechain-cosmos-sdk v0.0.0-20240722072054-a692e90dceb7
+	github.com/cosmos/cosmos-sdk => github.com/zkMeLabs/mechain-cosmos-sdk v0.0.0-20240821015333-b9a61ee4d0d5
 	github.com/cosmos/iavl => github.com/bnb-chain/greenfield-iavl v0.20.1
-	github.com/cosmos/ibc-go/v7 => github.com/zkMeLabs/mechain-ibc-go v0.0.0-20240722073438-a0d1a6577104
+	github.com/cosmos/ibc-go/v7 => github.com/zkMeLabs/mechain-ibc-go v0.0.0-20240823060230-12e998e3fb1c
 	github.com/ethereum/go-ethereum => github.com/evmos/go-ethereum v1.10.26-evmos-rc2
-	github.com/evmos/evmos/v12 => github.com/zkMeLabs/mechain/v12 v12.0.0-20240722093541-f933fc682876
+	github.com/evmos/evmos/v12 => github.com/zkMeLabs/mechain/v12 v12.0.0-20240823061619-d84f8416dfdf
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
 )
