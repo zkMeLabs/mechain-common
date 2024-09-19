@@ -1,15 +1,16 @@
-# greenfield-common
-Support common libs for different repos of greenfield
+# mechain-common
 
+Support common libs for different repos of mechain
 
 ## Disclaimer
+
 **The software and related documentation are under active development, all subject to potential future change without
 notification and not ready for production use. The code and security audit have not been fully completed and not ready
 for any bug bounty. We advise you to be careful and experiment on the network at your own risk. Stay safe out there.**
 
 ## Supported Common Functions
 
-### 1. Erasure encode/decode algorithm 
+### 1. Erasure encode/decode algorithm
 
 - Erasure package support RSEncoder which contain basic Encode and Decode ReedSolomon APIs. Function as follows:
 
@@ -36,8 +37,8 @@ func DecodeRawSegment(pieceData [][]byte, segmentSize int64, dataShards, parityS
 
 ### 2. Compute integrity hash of file content
 
-Hash package support methods to compute the integrity hash of greenfield objects , the computed methods is based on 
-redundancy strategy of greenfield. Function as follows:
+Hash package support methods to compute the integrity hash of mechain objects , the computed methods is based on
+redundancy strategy of mechain. Function as follows:
 
 ```go
 // ComputeIntegrityHash compute the integrity hash of file, return the integrity hashes, redundancy type  and file size.
@@ -60,7 +61,8 @@ func (i *IntegrityHasher) Finish() ([][]byte, int64, storageTypes.RedundancyType
 ```
 
 ### 3. Generate checksum and integrity hash
-Common library supports generating checksum and integrity hash. `GenerateChecksum` uses sha256 algorithm to compute hash. 
+
+Common library supports generating checksum and integrity hash. `GenerateChecksum` uses sha256 algorithm to compute hash.
 `GenerateIntegrityHash` is used to compute all checksum to get an integrity hash. Function as follows:
 
 ```go
@@ -82,3 +84,7 @@ func ChallengePieceHash(integrityHash []byte, checksumList [][]byte, index int, 
 // VerifyIntegrityHash verify integrity hash if right
 func VerifyIntegrityHash(integrityHash []byte, checksumList [][]byte) error
 ```
+
+## Fork Information
+
+This project is forked from [greenfield-common](https://github.com/bnb-chain/greenfield-common). Significant changes have been made to adapt the project for specific use cases, but much of the core functionality comes from the original project.
