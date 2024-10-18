@@ -6,7 +6,7 @@ import (
 
 	"github.com/rs/zerolog/log"
 
-	"github.com/bnb-chain/greenfield-common/go/redundancy/erasure"
+	"github.com/zkMeLabs/mechain-common/go/redundancy/erasure"
 )
 
 // PieceObject - details of the erasure encoded piece
